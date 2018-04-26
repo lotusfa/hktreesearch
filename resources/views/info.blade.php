@@ -50,7 +50,7 @@
             
             <div class="jumbotron container" >
               <h1>香港樹木搜尋</h1> 
-              <p> 如欲了解更多，請前往 <a href="https://hksearchtree.lotusfa.com">https://hksearchtree.lotusfa.com</a></p>
+              <p> 如欲了解更多，請前往 <a href="https://hk-tree.lotusfa.com/">https://hk-tree.lotusfa.com/</a></p>
               <p></p> 
               <div class="input-group" >
                 <input id="searchInput" type="text" class="form-control" placeholder="Enter Tree Code....">
