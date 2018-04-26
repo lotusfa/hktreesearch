@@ -1,0 +1,106 @@
+
+body, html, #app {
+height: 100%;
+width: 100%;
+line-height: 1.8;
+font-family: "Lato", sans-serif;
+}
+
+.bgimg-1 {
+    background-image: url('https://res.cloudinary.com/dcmnwc3ux/image/upload/q_auto:good,c_scale,h_1000,q_50:420,w_2000/v1514057098/HK_Search_Tree_BKground_img.jpg');
+    min-height: 100%;
+    min-width:100%
+}
+.bgimg-1 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1 {
+        background-attachment: scroll;
+    }
+}
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active for <2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.searchTreeForm{
+  background-color: rgba(0, 0, 0, 0.7)!important;
+  padding: 20px;
+}
+
+.searchTreeForm button , .searchTreeForm input{
+  background-color: rgba(0, 0, 0, 0)!important;
+}
+
+.searchTreeForm input {
+  border-bottom: 1px solid white;
+  min-width: 80%;
+}
+
+.searchTreeForm input:focus{
+    border-bottom: 1px solid green;
+    box-shadow: none!important;
+}
+
+.searchTreeForm,.searchTreeForm input, .searchTreeForm button, .searchTreeForm label{
+  text-align: center;
+    border: none;
+  
+    font-size: 20px;
+    color: #fff;
+    line-height: 1.8;
+    animation:opac 0.8s;
+}
+
+.close {
+  margin-right: 20px;
+  opacity: .8;
+}
+
+.back_button{
+  background-color: transparent;
+  border: none;
+  opacity: .8;
+}
+
+.back_button:focus {
+  border: none;
+}
+
+.resultBox {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  font-size: 15px;
+  color: #fff;
+  animation:opac 0.8s;
+}
+
+.resultBox span {
+  color: #fff;
+}
+
+.resultBox button:focus{
+  color: gray;
+  background-color: transparent;
+}
+
+.searchDetail .thumbnail{
+  width: 70%;
+  margin: auto;
+  margin-bottom: 50px;
+  background-color: transparent!important;
+  border: none!important;
+}
