@@ -58,10 +58,13 @@
               <button class="btn btn-default" type="button" onclick="search()">Search</button>
             </span>
           </div>
+
+          <p class="sultStats"><small>Search More: ie. <a href="../search/{{$ranString}}">{{$ranString}}</a></small></p>
         </div>
 
         <div class="container">
           <p class="sultStats">About  {{$count}} results</p>
+
 
           @if ($count != 0)
           <table class="table" id="trees_result" >
@@ -83,8 +86,6 @@
             </tbody>
           </table>
           @endif
-
-          <p class="sultStats">Search More: ie. <a href="../search/{{$ranString}}">{{$ranString}}</a></p>
         </div>
 
         

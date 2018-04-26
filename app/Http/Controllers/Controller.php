@@ -7,6 +7,16 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
@@ -32,16 +42,6 @@ class Controller extends BaseController
     	$count = count($rArr['d']);
     	$treeObj = $rArr['d'];
     	
-        function generateRandomString($length = 10) {
-            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-            $charactersLength = strlen($characters);
-            $randomString = '';
-            for ($i = 0; $i < $length; $i++) {
-                $randomString .= $characters[rand(0, $charactersLength - 1)];
-            }
-            return $randomString;
-        }
-
 		return view('search',[ 'trees' => $treeObj , 'count' => $count , 'ranString' => generateRandomString(1) ]);
     }
 
@@ -79,7 +79,7 @@ class Controller extends BaseController
     		"RefNo" => $tree['refno']
     		);
 
-		return view('info',[ 'tree' => $treeInfo , 'imgLink' => $imgLink ]);
+		return view('info',[ 'tree' => $treeInfo , 'imgLink' => $imgLink , 'ranString' => generateRandomString(1) ]);
     }
 
 

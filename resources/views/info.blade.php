@@ -58,6 +58,7 @@
                   <button class="btn btn-default" type="button" onclick="search()">Search</button>
                 </span>
               </div>
+              <p class="sultStats"><small>Search More: ie. <a href="../search/{{$ranString}}">{{$ranString}}</a></small></p>
             </div>
         <div class="container">
           <div class="searchDetail">
