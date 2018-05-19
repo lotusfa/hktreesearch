@@ -65,7 +65,11 @@ class Controller extends BaseController
     	$rArr = json_decode($result, true);
     	$count = count($rArr['d']);
     	$tree = $rArr['d'];
-    	$imgLink = "https://www.greening.gov.hk/treeregister/map/".$rArr['d']['photos'][0];
+        if ($rArr['d']['photos']) {
+            $imgLink = "https://www.greening.gov.hk/treeregister/map/".$rArr['d']['photos'][0];
+        }else {
+            $imgLink = "";
+        }
     	$treeInfo = array(
     		"Name" => $tree['species'],
     		"地區" => $tree['district'],
